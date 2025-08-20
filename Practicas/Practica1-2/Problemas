@@ -1,0 +1,12 @@
+1. Factorial (recursivo)
+		n par n=n%2
+		n impar n=3n+1
+		Caso base: 1
+
+	2. Serie de figonachi
+		(n-2)(n-1)
+		Caso base: n= 1 y n=0
+
+	3. Colllatz
+		Recurcion (n)(n-1)
+		Caso base: n = 1
