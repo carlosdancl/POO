@@ -59,11 +59,8 @@ public class Practica1_2_Daniel {
     }
 
     public static void collartz (int n){
-        System.out.println(n);
         if (n == 1) return;
-
         n = n%2 == 0 ? n/2 : 3*n +1;
         collartz(n);
-    }
-    
+    }  
 }
