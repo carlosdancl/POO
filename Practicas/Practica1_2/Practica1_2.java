@@ -6,6 +6,7 @@ public class Practica1_2 {
         int op, n;
 
         do {
+            System.out.println("");
             System.out.println("Practica 1");
             System.out.println("Menu (Seleccione una opcion):");
             System.out.println("1.- Factorial");
@@ -24,7 +25,7 @@ public class Practica1_2 {
                 case 2:
                     System.out.println("Introduzce el valor de n: ");
                     n = s.nextInt();
-                    System.out.println("El numero en la posicion " + n + " de la Serie de Fibonacci es " + fibonacci(n - 1));
+                    mostrarFibonacci(n);
                     break;
                 case 3:
                     System.out.println("Introduzce el valor de n: ");
@@ -51,14 +52,20 @@ public class Practica1_2 {
         }
     }
 
-    public static int fibonacci (int n) {
-        System.out.println(n + " ");
+    public static int fibonacci(int n) {
         if (n == 0) {
-            return n;
-        } else if (n == 1) {
-            return n;
+            return 0;
+        }
+        if (n == 1) {
+            return 1;
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+    public static void mostrarFibonacci(int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci(i) + " ");
+        }
+        System.out.println();
     }
 
     public static void collatz (int n) {
