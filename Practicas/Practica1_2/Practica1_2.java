@@ -52,6 +52,7 @@ public class Practica1_2 {
     }
 
     public static int fibonacci (int n) {
+        System.out.println(n + " ");
         if (n == 0) {
             return n;
         } else if (n == 1) {
