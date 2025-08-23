@@ -1,3 +1,4 @@
+package Reto;
 import java.util.Scanner;
 public class TrianguloPascal {
     public static void main(String[] args) {
