@@ -47,9 +47,8 @@ public class Practica1_2 {
     public static int factorial (int n) {
         if (n == 0) {
             return 1;
-        } else {
-            return n * factorial(n - 1);
         }
+        return n * factorial(n - 1);
     }
 
     public static int fibonacci(int n) {
@@ -62,14 +61,15 @@ public class Practica1_2 {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
     public static void mostrarFibonacci(int n) {
-        for (int i = 0; i < n; i++) {
-            System.out.print(fibonacci(i) + " ");
+        int i;
+        for (i = 0; i < n; i++) {
+            System.out.print(fibonacci(i) + ", ");
         }
         System.out.println();
     }
 
     public static void collatz (int n) {
-        System.out.print(n + "  ");
+        System.out.print(n + ",  ");
         if (n == 1) {
             return;
         } else if (n % 2 == 0) {
