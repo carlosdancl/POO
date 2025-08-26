@@ -1,44 +1,54 @@
-package Reto;
 import java.util.Scanner;
+
 public class TrianguloPascal {
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        int nivel;
-        do {
-            System.out.print("Ingresa el nivel del triángulo de Pascal: ");
-            nivel = s.nextInt();
-            pascal(nivel);
-        } while(nivel < 1);
-        s.close();
-    }
-    
-    public static void pascal(int n) {
-        int i, j, k;
-        int[][] triangulo = new int[n][n];
-        
-        for (i = 0; i < n; i++) {
-            for (j = 0; j <= i; j++) {
-                if (j == 0 || j == i) {
-                    triangulo[i][j] = 1;
-                } else {
-                    triangulo[i][j] = triangulo[i - 1][j - 1] + triangulo[i - 1][j];
-                }
-            }
+    public static int C(int n, int k) { // Generación del número por la definición C(n, k) = C(n - 1, k - 1) + C(n - 1, k)
+        if (k < 0 || k > n) {
+            return 0;
         }
+        if (k == 0 || k == n) {
+            return 1;
+        }
+        return C(n - 1, k - 1) + C(n - 1, k);
+    }
+
+    public static int dig(int numero) { // Cuenta del número de dígitos de un número
+        if (numero == 0) {
+            return 1;
+        }
+        int contador = 0;
+        if (numero < 0) {
+            numero = -numero;
+        }
+        while (numero > 0) {
+            numero /= 10;
+            contador++;
+        }
+        return contador;
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in); // Variables y Funciones
+        int i = 0, j = 0, k = 0, m = 0, valor, anchoActual;
+        System.out.print("Número de niveles: ");
+        int n = s.nextInt();
         
-        int max = triangulo[n - 1][n / 2]; 
-        int ancho = String.valueOf(max).length() + 1;
+        int valorMaximo = C(n - 1, (n - 1) / 2);
+        int anchoMaximo = dig(valorMaximo);
         
-        for (i = 0; i < n; i++) {
-            // espacios iniciales
-            for (k = 0; k < (n - i) * (ancho / 2); k++) {
+        for (i = 0; i < n; i++) {                                           // Impresión de Resultados
+            for (k = 0; k < (n - 1 - i) * (anchoMaximo + 1) / 2; k++) {
                 System.out.print(" ");
             }
-
             for (j = 0; j <= i; j++) {
-                System.out.printf("%" + ancho + "d", triangulo[i][j]);
+                valor = C(i, j);
+                anchoActual = dig(valor);
+                for (m = 0; m < anchoMaximo - anchoActual; m++) {
+                    System.out.print(" ");
+                }
+                System.out.print(valor + " ");
             }
             System.out.println();
         }
+        s.close();
     }
 }
