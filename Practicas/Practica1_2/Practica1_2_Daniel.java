@@ -49,6 +49,7 @@ public class Practica1_2_Daniel {
     }
 
     public static int fibonacci(int n) {
+        
         if (n == 0) {
             return 0;
         } else if (n == 1) {
@@ -59,6 +60,7 @@ public class Practica1_2_Daniel {
     }
 
     public static void collartz (int n){
+        System.out.print(n + "  ");
         if (n == 1) return;
         n = n%2 == 0 ? n/2 : 3*n +1;
         collartz(n);
