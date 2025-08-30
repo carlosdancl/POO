@@ -35,7 +35,7 @@ public class TrianguloPascal {
         int valorMaximo = C(n - 1, (n - 1) / 2);
         int anchoMaximo = dig(valorMaximo);
         
-        for (i = 0; i < n; i++) {
+        for (i = 0; i < n; i++) {                                           // Impresión de Resultados
             for (k = 0; k < (n - 1 - i) * (anchoMaximo + 1) / 2; k++) {
                 System.out.print(" ");
             }
