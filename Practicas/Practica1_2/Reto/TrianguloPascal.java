@@ -2,9 +2,6 @@ import java.util.Scanner;
 
 public class TrianguloPascal {
     public static int C(int n, int k) { // Generación del número por la definición C(n, k) = C(n - 1, k - 1) + C(n - 1, k)
-        if (k < 0 || k > n) {
-            return 0;
-        }
         if (k == 0 || k == n) {
             return 1;
         }
