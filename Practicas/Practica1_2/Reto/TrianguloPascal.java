@@ -1,14 +1,17 @@
 import java.util.Scanner;
 
 public class TrianguloPascal {
-    public static int C(int n, int k) {
+    public static int C(int n, int k) { // Generación del número por la definición C(n, k) = C(n - 1, k - 1) + C(n - 1, k)
+        if (k < 0 || k > n) {
+            return 0;
+        }
         if (k == 0 || k == n) {
             return 1;
         }
         return C(n - 1, k - 1) + C(n - 1, k);
     }
 
-    public static int dig(int numero) {
+    public static int dig(int numero) { // Cuenta del número de dígitos de un número
         if (numero == 0) {
             return 1;
         }
@@ -24,7 +27,7 @@ public class TrianguloPascal {
     }
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+        Scanner s = new Scanner(System.in); // Variables y Funciones
         int i = 0, j = 0, k = 0, m = 0, valor, anchoActual;
         System.out.print("Número de niveles: ");
         int n = s.nextInt();
@@ -32,7 +35,7 @@ public class TrianguloPascal {
         int valorMaximo = C(n - 1, (n - 1) / 2);
         int anchoMaximo = dig(valorMaximo);
         
-        for (i = 0; i < n; i++) {
+        for (i = 0; i < n; i++) {                                           // Impresión de Resultados
             for (k = 0; k < (n - 1 - i) * (anchoMaximo + 1) / 2; k++) {
                 System.out.print(" ");
             }
