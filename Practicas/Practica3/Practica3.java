@@ -17,7 +17,7 @@ public class Practica3 {
         }
         Random random = new Random(semilla);//inicializa en semilla
         StringBuilder sb = new StringBuilder();
-        for(int i; i<32; i++){
+        for(int i=0; i<32; i++){
             int valor = random.nextInt(16);//cada pasada cambia el estado del objeto, por eso da diferentes numeros pero siempre da el mismo hash con la misma semilla.
             sb.append(Integer.toHexString(valor));
         }
