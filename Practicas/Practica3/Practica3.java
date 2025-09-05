@@ -33,6 +33,9 @@ public class Practica3 {
             String key = generaHash(lista.get(i));
             mapa.put(lista.get(i),key);
         }
+        for (String texto: lista){
+            System.out.println(texto + ":"+ mpa.get(texto));
+        }
     }
     
 }
