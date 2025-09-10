@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.lang.Math;
 
 public class EcuacionSegundoGrado {
@@ -17,21 +16,14 @@ public class EcuacionSegundoGrado {
             System.out.println("x1 = " + -b / (2 * a) + " + " + Math.sqrt(-disc) / (2 * a) + "i");
             System.out.println("x2 = " + -b / (2 * a) + " - " + Math.sqrt(-disc) / (2 * a) + "i");
         }
-        System.err.println("\n");
+        System.err.println("");
     }
 
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        double a, b, c;
-
-        System.out.print("Ingrese el valor A: ");
-        a = s.nextDouble();
-        System.out.print("Ingrese el valor B: ");
-        b = s.nextDouble();
-        System.out.print("Ingrese el valor C: ");
-        c = s.nextDouble();
-        s.close();
-
+        double a = Double.parseDouble(args[0]);
+        double b = Double.parseDouble(args[1]);
+        double c = Double.parseDouble(args[2]);
+        
         formula(a, b, c);
     }
 }
