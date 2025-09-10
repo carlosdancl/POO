@@ -22,6 +22,7 @@ public class Practica3 {
             sb.append(Integer.toHexString(valor));
         }
         return sb.toString();
+        
     }  
     public static void main(String[] args){
         ArrayList<String> lista = new ArrayList<>();
