@@ -2,6 +2,24 @@ import java.util.Scanner;
 import java.lang.Math;
 
 public class EcuacionSegundoGrado {
+    public static void formula(double a, double b, double c){
+        double disc;
+
+        disc = b * b - 4 * a * c;
+        
+        System.err.println("\nLas Raíces son:\n");
+        if (disc > 0) {
+            System.out.println("x1 = " + (-b + Math.sqrt(disc)) / (2 * a));
+            System.out.println("x2 = " + (-b - Math.sqrt(disc)) / (2 * a));
+        } else if (disc == 0) {
+            System.out.println("x = " + -b / (2 * a));
+        } else {
+            System.out.println("x1 = " + -b / (2 * a) + " + " + Math.sqrt(-disc) / (2 * a) + "i");
+            System.out.println("x2 = " + -b / (2 * a) + " - " + Math.sqrt(-disc) / (2 * a) + "i");
+        }
+        System.err.println("\n");
+    }
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         double a, b, c;
@@ -14,23 +32,6 @@ public class EcuacionSegundoGrado {
         c = s.nextDouble();
         s.close();
 
-        double disc = b * b - 4 * a * c;
-        
-        System.err.println("\nLas Raíces son:\n");
-        if (disc > 0) {
-            double raiz1 = (-b + Math.sqrt(disc)) / (2 * a);
-            double raiz2 = (-b - Math.sqrt(disc)) / (2 * a);
-            System.out.println("x1 = " + raiz1);
-            System.out.println("x2 = " + raiz2);
-        } else if (disc == 0) {
-            double raiz = -b / (2 * a);
-            System.out.println("x = " + raiz);
-        } else {
-            double pReal = -b / (2 * a);
-            double pIm = Math.sqrt(-disc) / (2 * a);
-            System.out.println("x1 = " + pReal + " + " + pIm + "i");
-            System.out.println("x2 = " + pReal + " - " + pIm + "i");
-        }
-        System.err.println("\n");
+        formula(a, b, c);
     }
 }
