@@ -8,8 +8,9 @@ public class Reto {
         double d2 = Math.sqrt(Math.pow(p3.x - p2.x, 2) + Math.pow(p3.y-p2.y, 2));
         double d3 = Math.sqrt(Math.pow(p3.x - p1.x, 2) + Math.pow(p3.y-p1.y, 2));
         String texto;
-        if (d1 == d2 && d2 == d3){
-            texto = "Es triangulo";
+        double epsilon = 0.00001; 
+        if (Math.abs(d1 - d2) < epsilon && Math.abs(d2 - d3) < epsilon) {
+            texto = "Es triángulo equilátero";
         }else{
             texto = "No es triangulo";
         }
