@@ -3,7 +3,6 @@ import java.awt.event.*;
 
 public class Ventana extends JFrame {
     JButton boton;
-    Mensaje controlador;
     
     public Ventana(Mensaje controlador) {
 
