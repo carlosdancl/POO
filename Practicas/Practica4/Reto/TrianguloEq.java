@@ -1,5 +1,5 @@
 
-public class Reto {
+public class TrianguloEq {
     public static void main(String[] args){
         Punto p1 = new Punto(Double.parseDouble(args[0]), Double.parseDouble(args[1]));
         Punto p2 = new Punto(Double.parseDouble(args[2]), Double.parseDouble(args[3]));
