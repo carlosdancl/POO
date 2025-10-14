@@ -1,4 +1,4 @@
-package Practicas.Practica78;
+package mx.unam.fi.poo.p78;
 
 import javax.swing.JPanel;
 import javax.swing.BorderFactory;
