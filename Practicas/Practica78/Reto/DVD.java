@@ -1,15 +1,15 @@
 public class DVD extends Material {
-    private int minutes;
+    private int duracionMinutos;
 
-    public DVD(String title, String author, int year, int minutes) {
-        super(title, author, year);
-        this.minutes = minutes;
+    public DVD(String titulo, String autor, int anio, int duracionMinutos) {
+        super(titulo, autor, anio);
+        this.duracionMinutos = duracionMinutos;
     }
 
     @Override
-    public String mostrarInformacion() {
-        return "----- DVD -----\n" +
-               super.mostrarInformacion() +
-               "Duración: " + minutes + " minutos\n";
+    public void mostrarInformacion() {
+        System.out.println("----- Información del DVD -----");
+        super.mostrarInformacion();
+        System.out.println("Duración: " + duracionMinutos + " minutos");
     }
 }

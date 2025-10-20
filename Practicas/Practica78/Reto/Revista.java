@@ -1,15 +1,15 @@
 public class Revista extends Material {
-    private int editionNum;
+    private int numeroEdicion;
 
-    public Revista(String title, String author, int year, int editionNum) {
-        super(title, author, year);
-        this.editionNum = editionNum;
+    public Revista(String titulo, String autor, int anio, int numeroEdicion) {
+        super(titulo, autor, anio);
+        this.numeroEdicion = numeroEdicion;
     }
 
     @Override
-    public String mostrarInformacion() {
-        return "----- REVISTA -----\n" +
-               super.mostrarInformacion() +
-               "Número de Edición: " + editionNum + "\n";
+    public void mostrarInformacion() {
+        System.out.println("----- Información de la Revista -----");
+        super.mostrarInformacion();
+        System.out.println("Número de Edición: " + numeroEdicion);
     }
 }

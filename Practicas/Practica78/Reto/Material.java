@@ -1,17 +1,17 @@
 public class Material {
-    protected String title;
-    protected String author;
-    protected int year;
+    protected String titulo;
+    protected String autor;
+    protected int anio;
 
-    public Material(String title, String author, int year) {
-        this.title = title;
-        this.author = author;
-        this.year = year;
+    public Material(String titulo, String autor, int anio) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.anio = anio;
     }
 
-    public String mostrarInformacion() {
-        return "Título: " + title + "\n" +
-               "author: " + author + "\n" +
-               "Año: " + year + "\n";
+    public void mostrarInformacion() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Año: " + anio);
     }
 }

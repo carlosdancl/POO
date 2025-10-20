@@ -1,15 +1,15 @@
 public class Libro extends Material {
     private String editorial;
 
-    public Libro(String title, String author, int year, String editorial) {
-        super(title, author, year);
+    public Libro(String titulo, String autor, int anio, String editorial) {
+        super(titulo, autor, anio);
         this.editorial = editorial;
     }
 
     @Override
-    public String mostrarInformacion() {
-        return "----- LIBRO -----\n" +
-               super.mostrarInformacion() +
-               "Editorial: " + editorial + "\n";
+    public void mostrarInformacion() {
+        System.out.println("----- Información del Libro -----");
+        super.mostrarInformacion();
+        System.out.println("Editorial: " + editorial);
     }
 }
