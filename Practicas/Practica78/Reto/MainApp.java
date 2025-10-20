@@ -1,4 +1,4 @@
-public class Biblioteca {
+public class MainApp {
     public static void main(String[] args) {
         Material[] misMateriales = new Material[3];
 
