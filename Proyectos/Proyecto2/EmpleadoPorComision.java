@@ -1,12 +1,11 @@
-package mx.unam.fi.poo.project2;
+package mx.unam.fi.poo.g1.project2;
 
 public class EmpleadoPorComision extends Empleado {
 
     private double ventasNetas;
     private double tarifaComision;
 
-    public EmpleadoPorComision(String nombre, String apellidoPaterno, String nss,
-                               double ventasNetas, double tarifaComision) {
+    public EmpleadoPorComision(String nombre, String apellidoPaterno, String nss, double ventasNetas, double tarifaComision) {
         
         super(nombre, apellidoPaterno, nss);
         setVentasNetas(ventasNetas);

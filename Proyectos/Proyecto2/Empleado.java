@@ -1,4 +1,4 @@
-package mx.unam.fi.poo.project2;
+package mx.unam.fi.poo.g1.project2;
 
 public abstract class Empleado {
     private final String nombre;

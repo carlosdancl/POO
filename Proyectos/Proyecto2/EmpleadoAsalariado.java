@@ -1,4 +1,4 @@
-package mx.unam.fi.poo.project2;
+package mx.unam.fi.poo.g1.project2;
 
 public class EmpleadoAsalariado extends Empleado {
     private double salarioSemanal;
@@ -29,7 +29,7 @@ public class EmpleadoAsalariado extends Empleado {
 
     @Override
     public String toString(){
-        return String.format("Emleado asalariado: %s\nSalario semanal: $%.2f", super.toString(), getSalarioSemanal());
+        return String.format("Empleado asalariado: %s\nSalario semanal: $%.2f", super.toString(), getSalarioSemanal());
     }
 }
 
