@@ -13,17 +13,5 @@ public class MainApp {
             System.out.println("Ingresos: $%,.2f\n", empleadoi.ingresos());
             System.out.println("----------------");
         }
-        System.out.println("\n--- (ERRORES) ---");
-        try {
-            new EmpleadoAsalariado("Carlos", "Ruiz", "333", -500.00);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error al crear empleado: " + e.getMessage());
-        }
-
-        try {
-            new EmpleadoPorComision("Maria", "Gómez", "444", 10000, 1.5); // Tarifa > 1.0
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error al crear empleado: " + e.getMessage());
-        }
     }
 }
