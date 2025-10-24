@@ -8,9 +8,9 @@ public class MainApp {
         empleados[0] = empAsalariado
         empleados[1] = empComision
         System.out.println("----------------");
-        for(Empleado empleadoi : empleados){
-            System.out.println(empleadoi);
-            System.out.println("Ingresos: $%,.2f\n", empleadoi.ingresos());
+        for(Empleado i : empleados){
+            System.out.println(i);
+            System.out.println("Ingresos: $%,.2f\n", i.ingresos());
             System.out.println("----------------");
         }
     }
