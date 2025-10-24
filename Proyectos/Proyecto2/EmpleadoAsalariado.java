@@ -13,10 +13,13 @@ public class EmpleadoAsalariado extends Empleado {
     }
 
     public void setSalarioSemanal(double salarioSemanal){
-        if (salarioSemanal < 0.0){
-            System.out.println("El salario semanal debe ser >= 0.0");
+        if (salarioSemanal >= 0.0){
+            this.salarioSemanal = salarioSemanal; 
         }
-        this.salarioSemanal = salarioSemanal;
+        else{
+            System.out.println("Error: El salario semanal debe ser >= 0.0");
+            this.salarioSemanal = 0.0; 
+        }
     }
 
     @Override
@@ -29,3 +32,4 @@ public class EmpleadoAsalariado extends Empleado {
         return String.format("Emleado asalariado: %s\nSalario semanal: $%.2f", super.toString(), getSalarioSemanal());
     }
 }
+
